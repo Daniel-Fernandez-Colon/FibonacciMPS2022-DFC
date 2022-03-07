@@ -1,20 +1,21 @@
 package org.danielfc.fibonacci;
 
 public class Fibonacci {
-    public int compute(int n)
+    public int compute(int value)
     {
-        if (n>1){
-            return compute(n-1) + compute(n-2);  //función recursiva
+        int resultado;
+        if (value>1){
+            resultado= compute(value-1) + compute(value-2);  //función recursiva
         }
-        else if (n==1) {  // caso base
-            return 1;
+        else if (value==1) {  // caso base
+            resultado = 1;
         }
-        else if (n==0){  // caso base
-            return 0;
+        else if (value==0){  // caso base
+            resultado= 0;
         }
         else{ //error
-            System.out.println("Debes ingresar un tamaño mayor o igual a 1");
-            return -1;
+            throw new RuntimeException("The value is negative: "+value);
         }
+        return resultado;
     }
 }
