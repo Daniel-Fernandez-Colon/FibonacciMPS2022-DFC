@@ -73,4 +73,8 @@ class FibonacciTest {
         assertEquals(expectedValue,obtainedValue);
     }
 
+    @Test
+    public void shouldComputeOfANegativeNumberRaisesAnException(){
+        assertThrows(RuntimeException.class, ()-> fibonacci.compute(-1));
+    }
 }
