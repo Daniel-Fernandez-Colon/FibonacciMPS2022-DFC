@@ -59,4 +59,18 @@ class FibonacciTest {
         assertEquals(expectedValue,obtainedValue);
     }
 
+    @Test
+    public void shouldComputeReturnThreeIfTheNumberIsFour(){
+        int expectedValue = 3;
+        int obtainedValue = fibonacci.compute(4);
+        assertEquals(expectedValue,obtainedValue);
+    }
+
+    @Test
+    public void shouldComputeReturnFiftyFiveIfTheNumberIsTen(){
+        int expectedValue = 55;
+        int obtainedValue = fibonacci.compute(10);
+        assertEquals(expectedValue,obtainedValue);
+    }
+
 }
